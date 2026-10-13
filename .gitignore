@@ -57,3 +57,14 @@ windows/
 *.iml
 .DS_Store
 Thumbs.db
+# Платформы, которые не используем в данной работе
+android/
+ios/
+linux/
+macos/
+windows/
+# IDE и системные файлы
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
