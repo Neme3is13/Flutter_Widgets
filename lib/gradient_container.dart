@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const starAlignment = Alignment.topCenter;
+const startAlignment = Alignment.topCenter;
 const endAlignment = Alignment.bottomCenter;
 
 class GradientContainer extends StatelessWidget {
@@ -9,6 +9,7 @@ class GradientContainer extends StatelessWidget {
   final Color color3;
 
   const GradientContainer(this.color1, this.color2, this.color3, {super.key});
+
   void rollDice() {}
 
   @override
@@ -17,15 +18,24 @@ class GradientContainer extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [color1, color2, color3],
-          begin: starAlignment,
+          begin: startAlignment,
           end: endAlignment,
         ),
       ),
       child: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset('assets/images/dice-1.png', width: 300),
-            TextButton(onPressed: rollDice, child: Text("roll dice")),
+            const SizedBox(height: 20),
+            TextButton(
+              onPressed: rollDice,
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.lime,
+                textStyle: const TextStyle(fontSize: 30),
+              ),
+              child: Text("Roll Dice"),
+            ),
           ],
         ),
       ),
