@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets_kovalevskii/gradient_container.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: (Scaffold(
-        body: Container(child: Center(child: Text("Hello world"))),
-      )),
+      home: (Scaffold(body: GradientContainer())),
     ),
   );
 }
